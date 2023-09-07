@@ -10,6 +10,20 @@
       font-weight: 400;
       margin-top: 0;
     }
+
+    label {
+      color: #0c0d36;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .custom-radio {
+      .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: #a3a3a3;
+        background-color: #29a867;
+      }
+    }
   }
 
   .form-control {
@@ -22,7 +36,7 @@
     color: #bbbbbb;
   }
 
-  @media screen and (max-width: 767px) {
+  @include media-breakpoint-down(lg) {
     .w-75 {
       width: 100% !important;
     }
