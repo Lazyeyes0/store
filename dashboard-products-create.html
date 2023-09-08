@@ -35,7 +35,7 @@
             </a>
             <a
               href="/dashboard-products.html"
-              class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action active"
               >My Products
             </a>
             <a
@@ -45,7 +45,7 @@
             </a>
             <a
               href="/dashboard-settings.html"
-              class="list-group-item list-group-item-action active"
+              class="list-group-item list-group-item-action"
               >Store Settings
             </a>
             <a
@@ -140,8 +140,8 @@
           >
             <div class="container-fluid pr-lg-5">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Store Settings</h2>
-                <p class="dashboard-subtitle">Make store that profitable</p>
+                <h2 class="dashboard-title">Create New Product</h2>
+                <p class="dashboard-subtitle">Create your own product</p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
@@ -152,18 +152,29 @@
                           <div class="row">
                             <div class="col-md-6 mb-2">
                               <div class="form-group">
-                                <label for="storeName">Store Name</label>
+                                <label for="productName">Product Name</label>
                                 <input
                                   type="text"
                                   class="form-control"
-                                  name="storeName"
-                                  id="storeName"
-                                  v-model="name"
+                                  name="productName"
+                                  id="productName"
                                   autofocus
                                 />
                               </div>
                             </div>
                             <div class="col-md-6 mb-2">
+                              <div class="form-group">
+                                <label for="price">Price</label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  name="price"
+                                  id="price"
+                                  autofocus
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
                               <div class="form-group">
                                 <label for="category">Category</label>
                                 <select
@@ -171,46 +182,43 @@
                                   id="category"
                                   class="form-control"
                                 >
-                                  <option value="">Furniture</option>
+                                  <option value="">Food</option>
                                 </select>
                               </div>
                             </div>
-                            <div class="col-md-6 mb-2">
+                            <div class="col-md-12 mb-2">
                               <div class="form-group">
-                                <label for="store">Store Status</label>
+                                <label for="descriptionProduct"
+                                  >Description</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  name="descriptionProduct"
+                                  id="descriptionProduct"
+                                  cols="30"
+                                  rows="5"
+                                ></textarea>
+                              </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                              <div class="form-group">
+                                <label for="thumnails">Thumnails</label>
+                                <div class="custom-file mb-2">
+                                  <input
+                                    type="file"
+                                    class="custom-file-input"
+                                    id="thumnails"
+                                    required
+                                  />
+                                  <label
+                                    class="custom-file-label"
+                                    for="thumnails"
+                                    >Choose file...</label
+                                  >
+                                </div>
                                 <p class="text-muted">
-                                  Apakah saat ini toko Anda buka?
+                                  Kamu dapat memilih lebig dari satu file
                                 </p>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreTrue"
-                                  />
-                                  <label
-                                    for="openStoreTrue"
-                                    class="custom-control-label"
-                                    >Buka</label
-                                  >
-                                </div>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreFalse"
-                                  />
-                                  <label
-                                    for="openStoreFalse"
-                                    class="custom-control-label"
-                                    >Sementara Tutup</label
-                                  >
-                                </div>
                               </div>
                             </div>
                           </div>
@@ -243,11 +251,9 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
-      $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
+      CKEDITOR.replace("descriptionProduct");
     </script>
   </body>
 </html>

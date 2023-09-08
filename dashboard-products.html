@@ -35,7 +35,7 @@
             </a>
             <a
               href="/dashboard-products.html"
-              class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action active"
               >My Products
             </a>
             <a
@@ -45,7 +45,7 @@
             </a>
             <a
               href="/dashboard-settings.html"
-              class="list-group-item list-group-item-action active"
+              class="list-group-item list-group-item-action"
               >Store Settings
             </a>
             <a
@@ -140,93 +140,116 @@
           >
             <div class="container-fluid pr-lg-5">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Store Settings</h2>
-                <p class="dashboard-subtitle">Make store that profitable</p>
+                <h2 class="dashboard-title">My Products</h2>
+                <p class="dashboard-subtitle">Manage it well and get money</p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
-                  <div class="col-12">
-                    <form action="">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-6 mb-2">
-                              <div class="form-group">
-                                <label for="storeName">Store Name</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  name="storeName"
-                                  id="storeName"
-                                  v-model="name"
-                                  autofocus
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-2">
-                              <div class="form-group">
-                                <label for="category">Category</label>
-                                <select
-                                  name="category"
-                                  id="category"
-                                  class="form-control"
-                                >
-                                  <option value="">Furniture</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-2">
-                              <div class="form-group">
-                                <label for="store">Store Status</label>
-                                <p class="text-muted">
-                                  Apakah saat ini toko Anda buka?
-                                </p>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreTrue"
-                                  />
-                                  <label
-                                    for="openStoreTrue"
-                                    class="custom-control-label"
-                                    >Buka</label
-                                  >
-                                </div>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreFalse"
-                                  />
-                                  <label
-                                    for="openStoreFalse"
-                                    class="custom-control-label"
-                                    >Sementara Tutup</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col text-right">
-                              <button
-                                type="button"
-                                class="btn btn-success px-5"
-                              >
-                                Save Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
+                  <div class="col">
+                    <a
+                      href="/dashboard-products-create.html"
+                      class="btn btn-success px-4"
+                    >
+                      Add New Product
+                    </a>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-1.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Food</div>
                       </div>
-                    </form>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-2.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Orange Bogotta</div>
+                        <div class="product-category">Food</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-1.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Food</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-3.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Orange Bogotta</div>
+                        <div class="product-category">Food</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-2.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Orange Bogotta</div>
+                        <div class="product-category">Food</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <a
+                      href="/dashboard-products-details.html"
+                      class="card card-dashboard-product d-block"
+                    >
+                      <div class="card-body">
+                        <img
+                          src="/images/product/dashboard/product-card-1.png"
+                          alt="Gambar Product Pertama"
+                          class="w-100 mb-2"
+                        />
+                        <div class="product-title">Orange Bogotta</div>
+                        <div class="product-category">Food</div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
