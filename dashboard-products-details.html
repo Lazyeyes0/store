@@ -171,7 +171,7 @@
                                   class="form-control"
                                   name="price"
                                   id="price"
-                                  value="$100.00"
+                                  value="100.00"
                                 />
                               </div>
                             </div>
@@ -268,7 +268,17 @@
                             </div>
                           </div>
                           <div class="col-12">
-                            <button class="btn btn-secondary btn-block mt-4">
+                            <input
+                              type="file"
+                              name="file"
+                              id="fileUpload"
+                              style="display: none"
+                              multiple
+                            />
+                            <button
+                              class="btn btn-secondary btn-block mt-4"
+                              onclick="thisFileUpload()"
+                            >
                               Add Photo
                             </button>
                           </div>
@@ -292,6 +302,11 @@
       AOS.init();
     </script>
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+      function thisFileUpload() {
+        document.getElementById("fileUpload").click();
+      }
+    </script>
     <script>
       CKEDITOR.replace("descriptionProduct");
     </script>

@@ -9525,6 +9525,19 @@ footer p {
   font-size: 16px;
   font-weight: 300;
 }
+.page-dashboard .section-content .product-title {
+  color: #c5c5c5;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.page-dashboard .section-content .product-subtitle {
+  color: #0c0d36;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
 .page-dashboard .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #a3a3a3;
   background-color: #29a867;
